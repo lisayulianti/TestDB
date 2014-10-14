@@ -71,7 +71,7 @@ BEGIN
 					  DatePart(year,st.dayDate), DatePart(day,st.dayDate)
 )trx on allGroup.sg2id = trx.DMS and allGroup.cusGroup6ID = trx.Region
 
-order by DMS,[Month]
+order by [Month]
 
   
 END
