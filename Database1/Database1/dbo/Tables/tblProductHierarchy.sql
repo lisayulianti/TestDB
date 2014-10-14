@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[tblProductHierarchy] (
+    [producthierarchyID] INT IDENTITY (1, 1) NOT NULL,
+    [countryID]          INT NOT NULL,
+    [prdGroup1ID]        INT NULL,
+    [prdGroup2ID]        INT NULL,
+    [prdGroup3ID]        INT NULL,
+    [prdGroup4ID]        INT NULL,
+    [prdGroup5ID]        INT NULL,
+    [prdGroup6ID]        INT NULL,
+    [prdGroup7ID]        INT NULL,
+    [prdGroup8ID]        INT NULL,
+    [prdGroup9ID]        INT NULL,
+    [prdGroup10ID]       INT NULL,
+    [prdGroup11ID]       INT NULL,
+    [prdGroup12ID]       INT NULL,
+    [prdGroup13ID]       INT NULL,
+    [prdGroup14ID]       INT NULL,
+    [prdGroup15ID]       INT NULL,
+    [prdGroup16ID]       INT NULL,
+    [prdGroup17ID]       INT NULL,
+    [prdGroup18ID]       INT NULL,
+    [prdGroup19ID]       INT NULL,
+    [prdGroup20ID]       INT NULL,
+    [prdGroup21ID]       INT NULL,
+    [prdGroup22ID]       INT NULL,
+    CONSTRAINT [tblProductHierarchy_pk] PRIMARY KEY CLUSTERED ([producthierarchyID] ASC)
+);
+

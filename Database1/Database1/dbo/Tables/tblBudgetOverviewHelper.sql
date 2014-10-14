@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[tblBudgetOverviewHelper] (
+    [budgetOverviewHelperID] INT            IDENTITY (1, 1) NOT NULL,
+    [countryID]              INT            NOT NULL,
+    [tblName]                NVARCHAR (20)  NULL,
+    [rowOrder]               INT            NULL,
+    [rowCode]                NVARCHAR (30)  NULL,
+    [rowDescription]         NVARCHAR (100) NULL,
+    [rowGroup]               NVARCHAR (50)  NULL,
+    [rowSubGroup]            NVARCHAR (50)  NULL,
+    [rowBold]                BIT            CONSTRAINT [DF_tblBudgetOverviewHelper_rowTotal] DEFAULT ((0)) NULL,
+    [rowEmpty]               BIT            CONSTRAINT [DF_tblBudgetOverviewHelper_rowEmpty] DEFAULT ((0)) NOT NULL,
+    [rowPercentage]          BIT            CONSTRAINT [DF_tblBudgetOverviewHelper_rowPercentage] DEFAULT ((0)) NULL,
+    [rowTotal]               BIT            CONSTRAINT [DF_tblBudgetOverviewHelper_rowTotal_1] DEFAULT ((0)) NULL,
+    [rowDisplayed]           BIT            CONSTRAINT [DF_tblBudgetOverviewHelper_rowDisplayed] DEFAULT ((1)) NULL,
+    [roleID]                 INT            NULL,
+    [departmentID]           INT            NULL,
+    [forOutputReport]        BIT            CONSTRAINT [DF_tblBudgetOverviewHelper_outputReport] DEFAULT ((1)) NOT NULL,
+    [forWebPage]             BIT            NULL,
+    [reportID]               INT            NULL,
+    [importLogID]            INT            NULL,
+    CONSTRAINT [FK_tblBudgetOverviewHelper_tblDepartment] FOREIGN KEY ([departmentID]) REFERENCES [dbo].[tblDepartment] ([departmentID]),
+    CONSTRAINT [FK_tblBudgetOverviewHelper_tblReportSettings] FOREIGN KEY ([reportID]) REFERENCES [dbo].[tblReportSettings] ([reportID]),
+    CONSTRAINT [FK_tblBudgetOverviewHelper_tblRole] FOREIGN KEY ([roleID]) REFERENCES [dbo].[tblRole] ([roleID])
+);
+

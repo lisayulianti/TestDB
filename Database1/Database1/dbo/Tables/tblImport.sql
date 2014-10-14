@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[tblImport] (
+    [importID]             INT            IDENTITY (1, 1) NOT NULL,
+    [countryID]            INT            NULL,
+    [impMappedToTable]     NVARCHAR (200) NULL,
+    [impFileCode]          NVARCHAR (200) NULL,
+    [impSheetName]         NVARCHAR (200) NULL,
+    [impSourceIdFieldName] NVARCHAR (200) NULL,
+    [impTargetIdFieldName] NVARCHAR (200) NULL,
+    [impStartingRow]       INT            NULL,
+    [impSourceFieldName]   NVARCHAR (500) NULL,
+    [impTargetFieldName]   NVARCHAR (200) NULL,
+    [impConstraint]        NVARCHAR (500) NULL,
+    [impFileDescription]   NVARCHAR (200) NULL,
+    [impColumnDescription] NVARCHAR (200) NULL,
+    [impPreProcessSP]      NVARCHAR (200) NULL,
+    [impPostProcessSP]     NVARCHAR (200) NULL,
+    [impSequence]          INT            NULL,
+    [impIsFile]            BIT            NULL,
+    [impIDInsert]          BIT            NULL,
+    [impIsOverwrite]       BIT            NULL,
+    [importLogID]          INT            NULL,
+    [impSetSequence]       INT            NULL,
+    [impIsCheckDuplicate]  BIT            NULL,
+    [impOnlyAdmin]         BIT            NULL,
+    CONSTRAINT [tblImport_pk] PRIMARY KEY CLUSTERED ([importID] ASC)
+);
+

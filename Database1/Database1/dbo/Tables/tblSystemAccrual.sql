@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[tblSystemAccrual] (
+    [countryID]              INT            NOT NULL,
+    [pnlID]                  INT            NULL,
+    [customerID]             INT            NULL,
+    [cusGroup1ID]            INT            NULL,
+    [cusGroup4ID]            INT            NULL,
+    [cusGroup7ID]            INT            NULL,
+    [productID]              INT            NULL,
+    [prdGroup6ID]            INT            NULL,
+    [prdGroup11ID]           INT            NULL,
+    [prdGroup12ID]           INT            NULL,
+    [sysDocType]             NVARCHAR (100) NULL,
+    [sysDelete]              NVARCHAR (100) NULL,
+    [sysUomClientCode]       NVARCHAR (100) NULL,
+    [sysCurrency]            NVARCHAR (100) NOT NULL,
+    [sysAmount]              FLOAT (53)     NOT NULL,
+    [combinationID]          INT            NOT NULL,
+    [validFrom]              DATETIME       NOT NULL,
+    [validTo]                DATETIME       NOT NULL,
+    [importLogID]            INT            NOT NULL,
+    [prdGroup1ID]            INT            NULL,
+    [prdGroup7ID]            INT            NULL,
+    [prdGroup9ID]            INT            NULL,
+    [sysPrdGroup1ClientCode] NVARCHAR (100) NULL,
+    [sysPrdGroup7ClientCode] NVARCHAR (100) NULL,
+    [sysPrdGroup9ClientCode] NVARCHAR (100) NULL
+);
+
